@@ -1,0 +1,57 @@
+<!--
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┐
+* Show specialisation and loop all the Doctors for the specialisation
+*
+* Dispaly all Spescialisation 
+* On Specialisation Select Display All Doctor to specialisation and Appointment Prize
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @author         Praveen Sampath
+* @version        1.0
+* @created        2020-11-12
+* @controller     None | Standard | MyCustomController.cls
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+-->
+<template>
+    <lightning-layout class="slds-box slds-theme_default" horizontal-align="spread" multiple-rows="false">
+       
+        <!--Display All available Specialisation-->
+        <lightning-layout-item if:false={showSelected} padding="around-small" size="12">
+            <template for:each={lstSpecialization.data} for:item="objAcc">
+                <c-lwc-display-all-specializations class="slds-p-around_small" key={objAcc.Id} specialization={objAcc} onselected={specializationSelected}></c-lwc-display-all-specializations>
+            </template>
+        </lightning-layout-item>
+
+        <!--Display Selected Specialisation-->
+        <lightning-layout-item  class="slds-box" if:true={showSelected} padding="around-small" size="12">
+            <lightning-layout> 
+
+                <lightning-layout-item size="10">
+                    <c-lwc-display-specialization-selected record-id={specializationId}></c-lwc-display-specialization-selected>
+                </lightning-layout-item>
+            
+                <!--Modify the selection-->
+                <lightning-layout-item size="2">
+                    <lightning-button variant="brand" icon-name="utility:edit" label="Change Specilization" title="Modify the Selection" class="slds-float_right slds-m-top_small" onclick={handleModify}></lightning-button>
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </lightning-layout-item>
+
+        <!-- Display All Physicians based on the Specialization selected-->
+        <template if:false={showCalendar}>
+            <lightning-layout-item class="slds-box" if:true={specializationId} size="12">
+                <template for:each={lstDoctors.data} for:item="doctor">
+                     <!--<c-lwc-display-doctors key={doctor.Id} contact={doctor} record-id={doctor.Id}></c-lwc-display-doctors>-->
+                    <c-lwc-available-slot-summary onshowmore={handleShowCalendar}  onrefreshcmp={getrefresh} lst-booking={doctor.lstAppointments} key={doctor.conId} doctor={doctor} patient-id={recordId}></c-lwc-available-slot-summary>
+                </template>
+            </lightning-layout-item>
+        </template>
+
+        <template if:true={showCalendar}>
+            <lightning-layout-item class="slds-box" if:true={specializationId} size="12">
+                    <c-lwc-full-calendar oncompleted={onBookingComplete} patient-id={recordId} doc={doctor} doc-id={fullCalDocId}></c-lwc-full-calendar>
+            </lightning-layout-item>
+        </template>
+
+    </lightning-layout>
+</template>

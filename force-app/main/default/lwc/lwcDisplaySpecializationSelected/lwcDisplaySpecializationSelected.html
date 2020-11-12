@@ -1,0 +1,23 @@
+<!--
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┐
+* Display Specialisation Account Name and Appointment prize 
+*
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @author         Praveen Sampath
+* @version        1.0
+* @created        2020-11-12
+* @controller     None | Standard | MyCustomController.cls
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+-->
+<template>
+    <lightning-record-view-form record-id={recordId} object-api-name="Account">
+        <lightning-layout multiple-rows="false" >
+            <lightning-layout-item padding="around-small" size="4">
+                <lightning-output-field field-class="slds-text-heading_large" variant="label-hidden" field-name="Name" ></lightning-output-field>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="4">
+                <lightning-output-field field-class="slds-text-heading_large slds-text-color_success" variant="label-hidden" field-name="AppointmentPrice__c" ></lightning-output-field>
+            </lightning-layout-item>
+    </lightning-layout>
+    </lightning-record-view-form>
+</template>

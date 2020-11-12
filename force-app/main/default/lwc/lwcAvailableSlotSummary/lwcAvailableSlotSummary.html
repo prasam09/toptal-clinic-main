@@ -1,0 +1,50 @@
+<!--
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┐
+* Show Dooctor and loop all the appointments for next 5 days
+*
+* Displays Doctor Info and create child component to display all slots. 
+* Ability to see full calendar of the user
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @author         Praveen Sampath
+* @version        1.0
+* @created        YYYY-MM-DD
+* @controller     None | Standard | MyCustomController.cls
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+-->
+<template>
+    <lightning-card>
+
+        <!--Display Doctor Info-->
+        <div slot="title">
+            <lightning-layout slot="title" vertical-align="center">
+                <lightning-layout-item>
+                <!-- <img src={doctor.image}></img>  -->
+                 <img style ="width: 40px;height: 50px;object-fit: cover;border-radius: 50%;" src={doctor.image}></img> 
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" >
+                    <p>{doctor.conName}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <!--Button to See full Calendar-->
+        <div slot="actions">
+            <lightning-button variant="brand" label="Full Calendar" icon-name="standard:event" class="slds-m-left_x-small" onclick={loadCalendar}></lightning-button>
+        </div>
+        
+        <!--loop All slots for next 5 days-->
+        <div if:true={lstBooking}>
+            <lightning-layout multiple-rows="false">
+                <template for:each={lstBooking}  for:item="booking">
+                    <lightning-layout-item  key={booking.appointmentId} padding="horizontal-small" class="slds-col slds-size_1-of-5">
+                        <ul>
+                            <li class="slds-text-heading_medium slds-align_absolute-center"><lightning-formatted-date-time value={booking.appointmentDate}></lightning-formatted-date-time></li>
+                            <li><c-lwc-appointment-view oncompleted={onBookingComplete}  doc-id={doctor.conId} patient-id={patientId} booking={booking}></c-lwc-appointment-view></li>
+                        </ul>
+                    </lightning-layout-item>
+                </template>  
+
+            </lightning-layout>     
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,41 @@
+<!--
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┐
+* Show All Slots for next 5 days 
+*
+* Displays all available slots clickable and non-available slot disbaled
+* One a slot is selected pop-up will display with all details to create appointment
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @author         Praveen Sampath
+* @version        1.0
+* @created        YYYY-MM-DD
+* @controller     None | Standard | MyCustomController.cls
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+-->
+<template>
+    <!--Display all slots-->
+    <lightning-layout multiple-rows="false">
+        <lightning-layout-item class="slds-box" size="12">
+            <lightning-layout class="slds-var-p-around_x-small" multiple-rows="true">
+                <template  for:each={booking.lstSlots} for:item="timeslot">
+                    
+                    <lightning-layout-item  key={timeslot.slotId} if:true={timeslot.isValid} size="4">
+                        <lightning-button label={timeslot.sTime} title="Non-primary action" onclick={handleClick}></lightning-button>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item  key={timeslot.slotId} if:false={timeslot.isValid} size="4">
+                        <lightning-button class="slds-m-bottom-small" disabled  variant="destructive" label={timeslot.sTime} title="Non-primary action"></lightning-button>    
+                    </lightning-layout-item>
+                    
+                </template>
+            </lightning-layout>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <!--Popup to create appointment-->
+    <template if:true={openModal}>
+        <div data-modal="custommodal" class="modalclass">
+            <c-lwc-create-event onclosedialog={closeDialogBox} end-time={endDate} patient-id={patientId} start-time={startDate} doc-id={docId}></c-lwc-create-event>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </template>
+</template>

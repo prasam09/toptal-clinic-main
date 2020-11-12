@@ -1,0 +1,35 @@
+<template>
+
+
+    <lightning-card>
+        <div slot="title">
+            <lightning-layout slot="title" vertical-align="center">
+                <lightning-layout-item>
+                <!-- <img src={doctor.image}></img>  -->
+                 <img style ="width: 40px;height: 50px;object-fit: cover;border-radius: 50%;" src="/servlet/servlet.FileDownload?file=0152y0000005P25"></img> 
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" >
+                    <p>{doc.conName}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <lightning-button label="Back" onclick={closeDialogBox} slot="actions"></lightning-button>
+        <div class="slds-grid">
+            <!-- This is where the calendar gets loaded. -->
+            <!-- We'll use the class name "fullcalendarjs" as our dom target instead of the ID -->
+            <!-- In LWC, the id can changed dynamically -->
+            <div id="calendar" class="fullcalendarjs"></div>
+        </div>
+
+    </lightning-card>
+    
+
+    <template if:true={openModal}>
+        <div data-modal="custommodal" class="modalclass">
+            <c-lwc-create-event onclosedialog={closeDialogBox} end-time={endDate} patient-id={patientId} start-time={startDate} doc-id={docId}></c-lwc-create-event>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </template>
+
+</template>
