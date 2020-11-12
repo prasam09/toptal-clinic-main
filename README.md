@@ -18,4 +18,5 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
 
 ## Design Diagram
-https://github.com/prasam09/toptal-clinic-main/blob/main/Flowdesign.png
+![alt text](https://github.com/prasam09/toptal-clinic-main/blob/main/Flowdesign.png)
+
