@@ -1,0 +1,53 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0052y000000T47JAAS",
+      "createdByName": "Praveen Sampath",
+      "createdDate": "2020-11-07T20:06:08.000Z",
+      "fileName": "networks/GoogleNotification.network",
+      "fullName": "GoogleNotification",
+      "id": "0DB2y00000000BTGAY",
+      "lastModifiedById": "0052y000000T47JAAS",
+      "lastModifiedByName": "Praveen Sampath",
+      "lastModifiedDate": "2020-11-07T20:06:14.000Z",
+      "type": "Network"
+    },
+    {
+      "createdById": "0052y000000T47JAAS",
+      "createdByName": "Praveen Sampath",
+      "createdDate": "2020-11-12T06:08:55.000Z",
+      "fileName": "networks/kjhkj.network",
+      "fullName": "kjhkj",
+      "id": "0DB2y00000000EXGAY",
+      "lastModifiedById": "0052y000000T47JAAS",
+      "lastModifiedByName": "Praveen Sampath",
+      "lastModifiedDate": "2020-11-12T06:09:02.000Z",
+      "type": "Network"
+    },
+    {
+      "createdById": "0052y000000T47JAAS",
+      "createdByName": "Praveen Sampath",
+      "createdDate": "2020-11-01T06:55:59.000Z",
+      "fileName": "networks/Public Community.network",
+      "fullName": "Public Community",
+      "id": "0DB2y000000007RGAQ",
+      "lastModifiedById": "0052y000000T47JAAS",
+      "lastModifiedByName": "Praveen Sampath",
+      "lastModifiedDate": "2020-11-01T06:56:05.000Z",
+      "type": "Network"
+    },
+    {
+      "createdById": "0052y000000T47JAAS",
+      "createdByName": "Praveen Sampath",
+      "createdDate": "2020-10-31T08:29:14.000Z",
+      "fileName": "networks/Physician Login.network",
+      "fullName": "Physician Login",
+      "id": "0DB2y000000007MGAQ",
+      "lastModifiedById": "0052y000000T47JAAS",
+      "lastModifiedByName": "Praveen Sampath",
+      "lastModifiedDate": "2020-11-11T02:04:44.000Z",
+      "type": "Network"
+    }
+  ]
+}

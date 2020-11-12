@@ -1,0 +1,15 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0052y000000T47JAAS",
+    "createdByName": "Praveen Sampath",
+    "createdDate": "2020-10-31T11:33:14.000Z",
+    "fileName": "sharingSets/Account_Read_Write.sharingSet",
+    "fullName": "Account_Read_Write",
+    "id": "0H22y0000004C9TCAU",
+    "lastModifiedById": "0052y000000T47JAAS",
+    "lastModifiedByName": "Praveen Sampath",
+    "lastModifiedDate": "2020-10-31T11:33:14.000Z",
+    "type": "SharingSet"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0052y000001FpQOAA0",
+    "createdByName": "Receptionist",
+    "createdDate": "2020-11-04T10:30:08.000Z",
+    "fileName": "letterhead/Healthcare.letter",
+    "fullName": "Healthcare",
+    "id": "0162y00000001TdAAI",
+    "lastModifiedById": "0052y000000T47JAAS",
+    "lastModifiedByName": "Praveen Sampath",
+    "lastModifiedDate": "2020-11-08T13:25:33.000Z",
+    "manageableState": "unmanaged",
+    "type": "Letterhead"
+  }
+}

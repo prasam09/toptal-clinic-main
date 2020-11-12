@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Healthcare</letterhead>
+    <name>Notify Patients on Appointment Booking</name>
+    <style>freeForm</style>
+    <subject>Appointment Booking Confirmation</subject>
+    <textOnly>«Today»
+Dear «Pat_FullName»,
+
+This is a reminder that your appointment is scheduled on «Appt_Date» at «Appt_Time» for a(n) «Event_name».
+
+If you cannot make this appointment, please call our office at «Prac_Phone» at least 24 hours prior to this appointment. We would be happy to reschedule your appointment for a more convenient time.
+Your medical well-being is important to us !!
+
+Sincerely,
+The Staff and Physicians at
+«Prac_Name»</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

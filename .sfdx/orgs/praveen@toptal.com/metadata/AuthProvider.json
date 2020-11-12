@@ -1,0 +1,29 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0052y000000T47JAAS",
+      "createdByName": "Praveen Sampath",
+      "createdDate": "2020-11-07T07:18:40.000Z",
+      "fileName": "authproviders/GoogleAuthProvider.authprovider",
+      "fullName": "GoogleAuthProvider",
+      "id": "0SO2y000000Gmp2GAC",
+      "lastModifiedById": "0052y000000T47JAAS",
+      "lastModifiedByName": "Praveen Sampath",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "type": "AuthProvider"
+    },
+    {
+      "createdById": "0052y000000T47JAAS",
+      "createdByName": "Praveen Sampath",
+      "createdDate": "2020-11-01T06:36:46.000Z",
+      "fileName": "authproviders/GoogleOpenId.authprovider",
+      "fullName": "GoogleOpenId",
+      "id": "0SO2y000000GmjmGAC",
+      "lastModifiedById": "0052y000000T47JAAS",
+      "lastModifiedByName": "Praveen Sampath",
+      "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+      "type": "AuthProvider"
+    }
+  ]
+}

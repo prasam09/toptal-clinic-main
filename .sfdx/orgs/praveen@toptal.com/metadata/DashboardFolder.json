@@ -1,0 +1,16 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0052y000000T47JAAS",
+    "createdByName": "Praveen Sampath",
+    "createdDate": "2020-11-10T16:01:46.000Z",
+    "fileName": "dashboards/Appointment",
+    "fullName": "Appointment",
+    "id": "00l2y000000I2jzAAC",
+    "lastModifiedById": "0052y000000T47JAAS",
+    "lastModifiedByName": "Praveen Sampath",
+    "lastModifiedDate": "2020-11-10T16:01:46.000Z",
+    "manageableState": "unmanaged",
+    "type": "DashboardFolder"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0052y000000T47JAAS",
+    "createdByName": "Praveen Sampath",
+    "createdDate": "2020-11-10T16:02:07.000Z",
+    "fileName": "dashboards/Appointment/sSXhsPjDNMzQzYWOSkSBRZcwryxZii.dashboard",
+    "fullName": "Appointment/sSXhsPjDNMzQzYWOSkSBRZcwryxZii",
+    "id": "01Z2y0000000kO7EAI",
+    "lastModifiedById": "0052y000000T47JAAS",
+    "lastModifiedByName": "Praveen Sampath",
+    "lastModifiedDate": "2020-11-11T10:01:38.000Z",
+    "manageableState": "unmanaged",
+    "type": "Dashboard"
+  }
+}
